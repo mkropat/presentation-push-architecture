@@ -1,0 +1,74 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    title Anatomy of a Push-to-Browser Architecture
+
+    link(rel='stylesheet', type='text/css', href='build/build.css')
+
+  body
+
+    article.deck
+
+      section
+        h1 Anatomy of a Push-to-Browser Architecture
+
+      section
+        h2 Images
+        img(src="images/bespoke-logo.jpg")
+
+      section
+        h2 Keyboard Interaction
+        h3 Powered by <a href="https://github.com/bespokejs/bespoke-keys">bespoke-keys</a>
+
+      section
+        h2 Touch Interaction
+        h3 Powered by <a href="https://github.com/bespokejs/bespoke-touch">bespoke-touch</a>
+
+      section
+        h2 Responsive Slides
+        h3 Powered by <a href="https://github.com/bespokejs/bespoke-scale">bespoke-scale</a>
+
+      section
+        h2 Bullet List
+        h3 Powered by <a href="https://github.com/bespokejs/bespoke-bullets">bespoke-bullets</a>
+        ul.build.build-items
+          li Bullet 1
+          li Bullet 2
+          li Bullet 3
+
+      section
+        h2 Syntax Highlighting
+        h3 Powered by <a href="https://twitter.com/LeaVerou">Lea Verou</a>'s <a href="https://github.com/PrismJS/prism">Prism</a>
+        pre
+          code.language-javascript.
+            (function() {
+              function hanoi(n, a, b, c) {
+                return n ? hanoi(n - 1, a, c, b)
+                    .concat([[a, b]])
+                    .concat(hanoi(n - 1, c, b, a)) : [];
+              }
+              return hanoi(3, 'left', 'right', 'mid')
+                .map(function(d) {
+                  return d[0] + ' -&gt; ' + d[1];
+                });
+            })();
+
+      section(data-bespoke-hash='named-route')
+        h2 Named Route
+        h3 Powered by <a href="https://github.com/bespokejs/bespoke-hash">bespoke-hash</a>
+        p Look up! This route has been named with a <em>data-bespoke-hash</em> attribute.
+      section
+        h2.bullet Just the beginning…
+        ul.build.build-items
+          li Edit <a href="https://pugjs.org">Pug (formerly Jade)</a> markup in <em class="path">src/index.pug</em>
+          li Edit <a href="http://stylus-lang.com">Stylus</a> styles in <em class="path">src/styles/user.styl</em>
+          li Edit JavaScript in <em class="path">src/scripts/main.js</em>
+        br
+        ul.build
+          li
+            strong Enjoy! :)
+            a(href='https://twitter.com/markdalgleish')  -@markdalgleish
+
+    script(src='build/build.js')
