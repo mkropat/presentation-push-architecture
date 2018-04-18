@@ -31,5 +31,9 @@
   },
   "engines": {
     "node": ">=4.2.0"
+  },
+  "scripts": {
+    "publish": "gulp publish",
+    "start": "gulp serve"
   }
 }
