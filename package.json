@@ -35,5 +35,9 @@
   "scripts": {
     "publish": "gulp publish",
     "start": "gulp serve"
+  },
+  "dependencies": {
+    "prismjs": "^1.14.0",
+    "prismjs-themes": "^1.0.2"
   }
 }

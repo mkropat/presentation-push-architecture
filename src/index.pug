@@ -11,64 +11,360 @@ html
 
     article.deck
 
-      section
-        h1 Anatomy of a Push-to-Browser Architecture
+      section.anatomy
+        div.box
+          h1 Anatomy of a<br/>Push-to-Browser<br/>Architecture
+          p A talk by <a href="https://twitter.com/MichaelKropat">@MichaelKropat</a>
 
       section
-        h2 Images
-        img(src="images/bespoke-logo.jpg")
+        ul
+          li.bullet Centralized vs Decentralized
+          div.bullet
+            li Functional vs Object Oriented
+            li Static Typing vs Dynamic
+            li Monoliths vs Microservices
+            li Synchronous vs Asynchronous
+            li Containers vs Serverless
+            li Parallelism vs Event Loops
 
       section
-        h2 Keyboard Interaction
-        h3 Powered by <a href="https://github.com/bespokejs/bespoke-keys">bespoke-keys</a>
+        h2 Push vs Pull
 
       section
-        h2 Touch Interaction
-        h3 Powered by <a href="https://github.com/bespokejs/bespoke-touch">bespoke-touch</a>
+        h2 Pull
+        img(src='images/push-vs-pull-1.png')
+        p.credit
+          <a href="https://openclipart.org/detail/166255/uncomplete-realistic-car">Beetle icon</a> by Rasmussen
+
+
+      section.quick-slide
+        h2 Polling
+        img(src='images/push-vs-pull-2.png')
+        p.credit
+          <a href="https://openclipart.org/detail/166255/uncomplete-realistic-car">Beetle icon</a> by Rasmussen
+
+      section.quick-slide
+        h2 Push
+        img(src='images/push-vs-pull-3.png')
+        p.credit
+          <a href="https://openclipart.org/detail/166255/uncomplete-realistic-car">Beetle icon</a> by Rasmussen
+
+      section.quick-slide
+        h2 Push in Reality
+        img(src='images/push-vs-pull-4.png')
+        p.credit
+          <a href="https://openclipart.org/detail/166255/uncomplete-realistic-car">Beetle icon</a> by Rasmussen
 
       section
-        h2 Responsive Slides
-        h3 Powered by <a href="https://github.com/bespokejs/bespoke-scale">bespoke-scale</a>
+        h2 How does it know when to reload?
+        img(src='images/editor-reload.png')
 
       section
-        h2 Bullet List
-        h3 Powered by <a href="https://github.com/bespokejs/bespoke-bullets">bespoke-bullets</a>
-        ul.build.build-items
-          li Bullet 1
-          li Bullet 2
-          li Bullet 3
+        img(src='images/filesystemwatcher-1.png')
+        p.credit.
+          Lightning icon by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+
+      section.quick-slide
+        img(src='images/filesystemwatcher-2.png')
+        p(class='credit').
+          Lightning icon by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
 
       section
-        h2 Syntax Highlighting
-        h3 Powered by <a href="https://twitter.com/LeaVerou">Lea Verou</a>'s <a href="https://github.com/PrismJS/prism">Prism</a>
+        h2.bullet Why push?
+        ul
+          li.bullet More efficient than polling
+          li.bullet Feels snappier
+          li.bullet Less noise when troubleshooting
+          li.bullet Support multi-user scenarios "for free"
+          li.bullet Help avoid race conditions in the backend
+
+      section
+        h2.bullet Why not push?
+        ul
+          li.bullet It's not so much "instead of" pull, more like "in addition to"
+        img.bullet(src='images/push-and-pull-1.png')
+
+      section.quick-slide
+        h2 Why not push?
+        ul
+          li It's not so much "instead of" pull, more like "in addition to"
+        img.bullet(src='images/push-and-pull-2.png')
+
+      section
+        h2 Questions?
+        p Up next: High-level Architecture
+
+      section
+        img(src='images/request-1.png')
+
+      section.quick-slide
+        img(src='images/request-2.png')
+
+      section.quick-slide
+        img(src='images/polling-1.png')
+
+      section.quick-slide
+        img(src='images/polling-2.png')
+
+      section.quick-slide
+        img(src='images/request-2.png')
+
+      section.quick-slide
+        img(src='images/push-1.png')
+
+      section.quick-slide
+        img(src='images/push-2.png')
+
+      section.quick-slide
+        img(src='images/push-3.png')
+
+      section
+        img(src='images/caniuse-websockets.png')
+
+      section
+        img(src='images/push-pyramid-1.png')
+
+      section.quick-slide
+        img(src='images/push-pyramid-2.png')
+
+      section.quick-slide
+        img(src='images/push-pyramid-3.png')
+
+      section
+        h2.bullet Scaling
+        img.bullet(src='images/push-scaling-1.png')
+
+      section.quick-slide
+        h2 Scaling
+        img(src='images/push-scaling-2.png')
+
+      section.quick-slide
+        h2 Scaling
+        img(src='images/push-scaling-3.png')
+
+      section.quick-slide
+        h2 Scaling
+        img(src='images/push-scaling-4.png')
+
+      section.quick-slide
+        h2 Scaling
+        img(src='images/push-scaling-5.png')
+
+      section.quick-slide
+        h2 Scaling
+        img(src='images/push-scaling-6.png')
+
+      section
+        img(src='images/scaling-logos.png')
+
+      section
+        img(src='images/router.png')
+
+      section
+        h2 Questions?
+        p Up next: WebSocket protocol details
+
+      section
+        img(src='images/protocol-1.png')
+
+      section.quick-slide
+        img(src='images/protocol-2.png')
+
+      section.quick-slide
+        img(src='images/protocol-3.png')
+
+      section.quick-slide
+        img(src='images/protocol-4.png')
+
+      section.quick-slide
+        img(src='images/protocol-5.png')
+
+      section.quick-slide
+        img(src='images/protocol-6.png')
+
+      section.quick-slide
+        img(src='images/protocol-7.png')
+
+      section.quick-slide
+        img(src='images/protocol-8.png')
+
+      section
+        img(src='images/network-headers.png')
+
+      section
+        img(src='images/network-frames.png')
+
+      section
+        h2(style='text-align: center') Things I Wish Someone Told Me<br/>About WebSockets
+
+      section
+        h2 Streams
+        h2.bullet Messages
+        h2.bullet Frames?
+
+      section
         pre
           code.language-javascript.
-            (function() {
-              function hanoi(n, a, b, c) {
-                return n ? hanoi(n - 1, a, c, b)
-                    .concat([[a, b]])
-                    .concat(hanoi(n - 1, c, b, a)) : [];
-              }
-              return hanoi(3, 'left', 'right', 'mid')
-                .map(function(d) {
-                  return d[0] + ' -&gt; ' + d[1];
-                });
-            })();
+            WebSocketReceiveResult response;
+            var message = new List<byte>();
 
-      section(data-bespoke-hash='named-route')
-        h2 Named Route
-        h3 Powered by <a href="https://github.com/bespokejs/bespoke-hash">bespoke-hash</a>
-        p Look up! This route has been named with a <em>data-bespoke-hash</em> attribute.
+            var buffer = new byte[4096];
+            do
+            {
+              response = await socket.ReceiveAsync(buffer);
+              message.AddRange(buffer, 0, response.Count);
+            } while (!response.EndOfMessage);
+
+            return (response, message);
+
+      section.quick-slide
+        h2.bullet Most complexity is server-side
+        pre.bullet
+          code.language-javascript.
+            let ws = new WebSocket('wss://example.com/websocket');
+            ws.addEventListener('message', msg => handleMessage(msg));
+        div.bullet
+          p One exception:
+          pre
+            code.language-javascript.
+              ws.addEventListener('close', () => setTimeout(openWebsocket, 1000));
+
       section
-        h2.bullet Just the beginning…
-        ul.build.build-items
-          li Edit <a href="https://pugjs.org">Pug (formerly Jade)</a> markup in <em class="path">src/index.pug</em>
-          li Edit <a href="http://stylus-lang.com">Stylus</a> styles in <em class="path">src/styles/user.styl</em>
-          li Edit JavaScript in <em class="path">src/scripts/main.js</em>
-        br
-        ul.build
-          li
-            strong Enjoy! :)
-            a(href='https://twitter.com/markdalgleish')  -@markdalgleish
+        h2 Proxies
+        h2(style='visibility: hidden') Use TLS!
+
+      section.quick-slide
+        h2 <strike>Proxies</strike>
+        h2 Use TLS!
+
+      section
+        h2.bullet Keepalives
+        pre.bullet
+          code.language-javascript.
+
+            public void Configure(IApplicationBuilder app)
+            {
+              app.UseWebSockets(new WebSocketOptions
+              {
+                  KeepAliveInterval = TimeSpan.FromMinutes(2),
+              });
+            }
+
+      section
+        h2.bullet Same-origin policy
+        div.bullet
+          p On attacker's website:
+          pre
+            code.language-javascript.
+              let url = 'wss://vulnerablesite.example.com/websocket';
+              let ws = new WebSocket(url);
+              ws.onmessage = console.log.bind(console);
+
+      section
+        h2 Two Schools of Thought:
+        ol
+          li.bullet Auth check in HTTP
+          li.bullet Auth check in WebSocket<span style="visibility: hidden"><br/>^ don't make creds readable by JavaScript</span>
+
+      section.quick-slide
+        h2 Two Schools of Thought:
+        ol
+          li Auth check in HTTP
+          li.
+            <strike>Auth check in WebSocket</strike><br/>
+            ^ don't make creds readable by JavaScript
+
+      section
+        h2 Two Loops
+        ol
+          li Receive
+          li Send
+
+      section
+        pre
+          code.language-javascript.
+            using (var socket = await context.WebSockets.AcceptWebSocketAsync())
+            {
+                var pushTask = Task.Run(() => PushMessages(_messageSource, socket));
+
+                await ReceiveMessages(socket);
+
+                await pushTask;
+
+                await socket.CloseAsync();
+            }
+
+      section
+        h2 WebSocket Thread-safety
+        pre
+          code.language-javascript.
+            // Thread-safety:
+            //
+            // - It's acceptable to call ReceiveAsync and SendAsync in
+            //   parallel. One of each may run concurrently.
+            // - It's acceptable to have a pending ReceiveAsync while
+            //   CloseOutputAsync or CloseAsync is called.
+            // - Attemping to invoke any other operations in parallel may
+            //   corrupt the instance. Attempting to invoke a send operation
+            //   while another is in progress or a receive operation while
+            //   another is in progress will result in an exception.
+
+      section
+        h2 Two ways to close
+        pre
+          code.language-javascript.
+            try
+            {
+                while (true) {
+                  var response = await socket.ReceiveMessage();
+                  if (response.MessageType == WebSocketMessageType.Close)
+                      break;
+                }
+                await socket.CloseAsync();
+            }
+            catch (WebSocketException ex)
+            {
+                switch (ex.WebSocketErrorCode)
+                {
+                    case WebSocketError.ConnectionClosedPrematurely:
+                      // handle error
+                    default:
+                      // handle error
+                }
+            }
+
+      section
+        h2 Event Fan-out
+        pre
+          code.language-javascript.
+            var messages = new ConcurrentQueue<string>();
+
+            pushMessageSource.OnMessage += messages.Enqueue;
+            while (true)
+            {
+                if (!messages.TryDequeue(out var message))
+                {
+                    await Task.Delay(pushMessagePollingInterval);
+                    continue;
+                }
+
+                // send the message here
+            }
+
+
+      section
+        h2 Restart on deployment
+
+      section
+        h2 Backpressure?
+
+      section
+        img(src='images/sse.png')
+
+      section
+        ul.nobullets
+          li Slides: <a href="https://www.codetinkerer.com/presentation-push-architecture/">www.codetinkerer.com/presentation-push-architecture/</a>
+          li Demo App: <a href="https://github.com/mkropat/WebSocketDemo" target="_blank">github.com/mkropat/WebSocketDemo/</a>
+          li Twitter: <a href="https://twitter.com/MichaelKropat" target="_blank">@MichaelKropat</a>
 
     script(src='build/build.js')

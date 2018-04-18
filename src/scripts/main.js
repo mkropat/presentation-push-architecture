@@ -13,7 +13,7 @@ bespoke.from({ parent: 'article.deck', slides: 'section' }, [
   classes(),
   nav(),
   scale(),
-  bullets('.build, .build-items > *:not(.build-items)'),
+  bullets('.bullet, .build, .build-items > *:not(.build-items)'),
   hash(),
   prism(),
   extern(bespoke)
