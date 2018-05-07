@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Anatomy of a Push-to-Browser Architecture</title>
+    <link rel="stylesheet" type="text/css" href="build/build.css">
+  </head>
+  <body>
+    <article class="deck">
+      <section class="anatomy">
+        <div class="box">
+          <h1>Anatomy of a<br/>Push-to-Browser<br/>Architecture</h1>
+          <p>A talk by <a href="https://twitter.com/MichaelKropat">@MichaelKropat</a></p>
+        </div>
+      </section>
+      <section>
+        <ul>
+          <li class="bullet">Centralized vs Decentralized</li>
+          <div class="bullet">
+            <li>Functional vs Object Oriented</li>
+            <li>Static Typing vs Dynamic</li>
+            <li>Monoliths vs Microservices</li>
+            <li>Synchronous vs Asynchronous</li>
+            <li>Containers vs Serverless</li>
+            <li>Parallelism vs Event Loops</li>
+          </div>
+        </ul>
+      </section>
+      <section>
+        <h2>Push vs Pull</h2>
+      </section>
+      <section>
+        <h2>Pull</h2><img src="images/push-vs-pull-1.png">
+        <p class="credit"><a href="https://openclipart.org/detail/166255/uncomplete-realistic-car">Beetle icon</a> by Rasmussen</p>
+      </section>
+      <section class="quick-slide">
+        <h2>Polling</h2><img src="images/push-vs-pull-2.png">
+        <p class="credit"><a href="https://openclipart.org/detail/166255/uncomplete-realistic-car">Beetle icon</a> by Rasmussen</p>
+      </section>
+      <section class="quick-slide">
+        <h2>Push</h2><img src="images/push-vs-pull-3.png">
+        <p class="credit"><a href="https://openclipart.org/detail/166255/uncomplete-realistic-car">Beetle icon</a> by Rasmussen</p>
+      </section>
+      <section class="quick-slide">
+        <h2>Push in Reality</h2><img src="images/push-vs-pull-4.png">
+        <p class="credit"><a href="https://openclipart.org/detail/166255/uncomplete-realistic-car">Beetle icon</a> by Rasmussen</p>
+      </section>
+      <section>
+        <h2>How does it know when to reload?</h2><img src="images/editor-reload.png">
+      </section>
+      <section><img src="images/filesystemwatcher-1.png">
+        <p class="credit">
+          Lightning icon by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+          
+        </p>
+      </section>
+      <section class="quick-slide"><img src="images/filesystemwatcher-2.png">
+        <p class="credit">
+          Lightning icon by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+          
+        </p>
+      </section>
+      <section>
+        <h2 class="bullet">Why push?</h2>
+        <ul>
+          <li class="bullet">More efficient than polling</li>
+          <li class="bullet">Feels snappier</li>
+          <li class="bullet">Less noise when troubleshooting</li>
+          <li class="bullet">Support multi-user scenarios "for free"</li>
+          <li class="bullet">Help avoid race conditions in the backend</li>
+        </ul>
+      </section>
+      <section>
+        <h2 class="bullet">Why not push?</h2>
+        <ul>
+          <li class="bullet">It's not so much "instead of" pull, more like "in addition to"</li>
+        </ul><img class="bullet" src="images/push-and-pull-1.png">
+      </section>
+      <section class="quick-slide">
+        <h2>Why not push?</h2>
+        <ul>
+          <li>It's not so much "instead of" pull, more like "in addition to"</li>
+        </ul><img class="bullet" src="images/push-and-pull-2.png">
+      </section>
+      <section>
+        <h2>Questions?</h2>
+        <p>Up next: High-level Architecture</p>
+      </section>
+      <section><img src="images/request-1.png"></section>
+      <section class="quick-slide"><img src="images/request-2.png"></section>
+      <section class="quick-slide"><img src="images/polling-1.png"></section>
+      <section class="quick-slide"><img src="images/polling-2.png"></section>
+      <section class="quick-slide"><img src="images/request-2.png"></section>
+      <section class="quick-slide"><img src="images/push-1.png"></section>
+      <section class="quick-slide"><img src="images/push-2.png"></section>
+      <section class="quick-slide"><img src="images/push-3.png"></section>
+      <section><img src="images/caniuse-websockets.png"></section>
+      <section><img src="images/push-pyramid-1.png"></section>
+      <section class="quick-slide"><img src="images/push-pyramid-2.png"></section>
+      <section class="quick-slide"><img src="images/push-pyramid-3.png"></section>
+      <section>
+        <h2 class="bullet">Scaling</h2><img class="bullet" src="images/push-scaling-1.png">
+      </section>
+      <section class="quick-slide">
+        <h2>Scaling</h2><img src="images/push-scaling-2.png">
+      </section>
+      <section class="quick-slide">
+        <h2>Scaling</h2><img src="images/push-scaling-3.png">
+      </section>
+      <section class="quick-slide">
+        <h2>Scaling</h2><img src="images/push-scaling-4.png">
+      </section>
+      <section class="quick-slide">
+        <h2>Scaling</h2><img src="images/push-scaling-5.png">
+      </section>
+      <section class="quick-slide">
+        <h2>Scaling</h2><img src="images/push-scaling-6.png">
+      </section>
+      <section><img src="images/scaling-logos.png"></section>
+      <section><img src="images/router.png"></section>
+      <section>
+        <h2>Questions?</h2>
+        <p>Up next: WebSocket protocol details</p>
+      </section>
+      <section><img src="images/protocol-1.png"></section>
+      <section class="quick-slide"><img src="images/protocol-2.png"></section>
+      <section class="quick-slide"><img src="images/protocol-3.png"></section>
+      <section class="quick-slide"><img src="images/protocol-4.png"></section>
+      <section class="quick-slide"><img src="images/protocol-5.png"></section>
+      <section class="quick-slide"><img src="images/protocol-6.png"></section>
+      <section class="quick-slide"><img src="images/protocol-7.png"></section>
+      <section class="quick-slide"><img src="images/protocol-8.png"></section>
+      <section><img src="images/network-headers.png"></section>
+      <section><img src="images/network-frames.png"></section>
+      <section>
+        <h2 style="text-align: center">Things I Wish Someone Told Me<br/>About WebSockets</h2>
+      </section>
+      <section>
+        <h2>Streams</h2>
+        <h2 class="bullet">Messages</h2>
+        <h2 class="bullet">Frames?</h2>
+      </section>
+      <section>
+        <pre><code class="language-javascript">WebSocketReceiveResult response;
+var message = new List<byte>();
+
+var buffer = new byte[4096];
+do
+{
+  response = await socket.ReceiveAsync(buffer);
+  message.AddRange(buffer, 0, response.Count);
+} while (!response.EndOfMessage);
+
+return (response, message);
+</code></pre>
+      </section>
+      <section class="quick-slide">
+        <h2 class="bullet">Most complexity is server-side</h2>
+        <pre class="bullet"><code class="language-javascript">let ws = new WebSocket('wss://example.com/websocket');
+ws.addEventListener('message', msg => handleMessage(msg));</code></pre>
+        <div class="bullet">
+          <p>One exception:</p>
+          <pre><code class="language-javascript">ws.addEventListener('close', () => setTimeout(openWebsocket, 1000));
+</code></pre>
+        </div>
+      </section>
+      <section>
+        <h2>Proxies</h2>
+        <h2 style="visibility: hidden">Use TLS!</h2>
+      </section>
+      <section class="quick-slide">
+        <h2><strike>Proxies</strike></h2>
+        <h2>Use TLS!</h2>
+      </section>
+      <section>
+        <h2 class="bullet">Keepalives</h2>
+        <pre class="bullet"><code class="language-javascript">public void Configure(IApplicationBuilder app)
+{
+  app.UseWebSockets(new WebSocketOptions
+  {
+      KeepAliveInterval = TimeSpan.FromMinutes(2),
+  });
+}
+</code></pre>
+      </section>
+      <section>
+        <h2 class="bullet">Same-origin policy</h2>
+        <div class="bullet">
+          <p>On attacker's website:</p>
+          <pre><code class="language-javascript">let url = 'wss://vulnerablesite.example.com/websocket';
+let ws = new WebSocket(url);
+ws.onmessage = console.log.bind(console);
+</code></pre>
+        </div>
+      </section>
+      <section>
+        <h2>Two Schools of Thought:</h2>
+        <ol>
+          <li class="bullet">Auth check in HTTP</li>
+          <li class="bullet">Auth check in WebSocket<span style="visibility: hidden"><br/>^ don't make creds readable by JavaScript</span></li>
+        </ol>
+      </section>
+      <section class="quick-slide">
+        <h2>Two Schools of Thought:</h2>
+        <ol>
+          <li>Auth check in HTTP</li>
+          <li>
+            <strike>Auth check in WebSocket</strike><br/>
+            ^ don't make creds readable by JavaScript
+            
+          </li>
+        </ol>
+      </section>
+      <section>
+        <h2>Two Loops</h2>
+        <ol>
+          <li>Receive</li>
+          <li>Send</li>
+        </ol>
+      </section>
+      <section>
+        <pre><code class="language-javascript">using (var socket = await context.WebSockets.AcceptWebSocketAsync())
+{
+    var pushTask = Task.Run(() => PushMessages(_messageSource, socket));
+
+    await ReceiveMessages(socket);
+
+    await pushTask;
+
+    await socket.CloseAsync();
+}
+</code></pre>
+      </section>
+      <section>
+        <h2>WebSocket Thread-safety</h2>
+        <pre><code class="language-javascript">// Thread-safety:
+//
+// - It's acceptable to call ReceiveAsync and SendAsync in
+//   parallel. One of each may run concurrently.
+// - It's acceptable to have a pending ReceiveAsync while
+//   CloseOutputAsync or CloseAsync is called.
+// - Attemping to invoke any other operations in parallel may
+//   corrupt the instance. Attempting to invoke a send operation
+//   while another is in progress or a receive operation while
+//   another is in progress will result in an exception.
+</code></pre>
+      </section>
+      <section>
+        <h2>Two ways to close</h2>
+        <pre><code class="language-javascript">try
+{
+    while (true) {
+      var response = await socket.ReceiveMessage();
+      if (response.MessageType == WebSocketMessageType.Close)
+          break;
+    }
+    await socket.CloseAsync();
+}
+catch (WebSocketException ex)
+{
+    switch (ex.WebSocketErrorCode)
+    {
+        case WebSocketError.ConnectionClosedPrematurely:
+          // handle error
+        default:
+          // handle error
+    }
+}
+</code></pre>
+      </section>
+      <section>
+        <h2>Event Fan-out</h2>
+        <pre><code class="language-javascript">var messages = new ConcurrentQueue<string>();
+
+pushMessageSource.OnMessage += messages.Enqueue;
+while (true)
+{
+    if (!messages.TryDequeue(out var message))
+    {
+        await Task.Delay(pushMessagePollingInterval);
+        continue;
+    }
+
+    // send the message here
+}
+
+</code></pre>
+      </section>
+      <section>
+        <h2>Restart on deployment</h2>
+      </section>
+      <section>
+        <h2>Backpressure?</h2>
+      </section>
+      <section><img src="images/sse.png"></section>
+      <section>
+        <ul class="nobullets">
+          <li>Slides: <a href="https://www.codetinkerer.com/presentation-push-architecture/">www.codetinkerer.com/presentation-push-architecture/</a></li>
+          <li>Demo App: <a href="https://github.com/mkropat/WebSocketDemo" target="_blank">github.com/mkropat/WebSocketDemo/</a></li>
+          <li>Twitter: <a href="https://twitter.com/MichaelKropat" target="_blank">@MichaelKropat</a></li>
+        </ul>
+      </section>
+    </article>
+    <script src="build/build.js"></script>
+  </body>
+</html>
